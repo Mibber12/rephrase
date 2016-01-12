@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
-  def index
+  def create
+  render :index
   end
 
   def new
