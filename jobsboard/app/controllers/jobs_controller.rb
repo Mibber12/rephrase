@@ -17,7 +17,8 @@ class JobsController < ApplicationController
  	if @job.save
  		redirect_to @job
  	else
- 	    render "New"
+ 		@job = Job.new
+ 	    render :new 
  	end    	
  end
 
