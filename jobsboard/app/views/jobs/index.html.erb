@@ -1,5 +1,19 @@
 <h1>New Job</h1>
 <h1>Rephrase your job ad</h1>
 
-<%= render 'form' %>
-<%= link_to "Back", root_path %>
+<%= @jobs.each do |job| %>
+	<div class = "job">
+	<h2>
+		<%= link_to job.title, job.url%>
+	</h2>
+	<p>
+		<%= job.company%>
+	</p>
+	</div>
+<% end %>		
+
+<p><%= link_to "Add a job", new_job_path %></p>
+
+ 
+
+ 
